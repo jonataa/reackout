@@ -1,15 +1,15 @@
 import React from 'react';
 
-function getSymbolByCurrancy(currancy) {
+function getSymbolByCurrency(currency) {
     return {
         BRL: 'R$',
-    }[currancy] || '';
+    }[currency] || '';
 };
 
 const Price = (props) => {
 
-    const {currancy, value} = props;
-    const symbol = getSymbolByCurrancy(currancy);
+    const {currency, value} = props;
+    const symbol = getSymbolByCurrency(currency);
 
     return (
         <span>{symbol} {value}</span>

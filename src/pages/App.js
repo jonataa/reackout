@@ -14,8 +14,8 @@ const App = () => {
   async function fetchProducts() {
     // const response = await fetch('https://api.github.com/users/jonataa/repos');
     const products = [
-      {id: 1, title: 'Foo Bar', price: {value: 0.99, currancy: 'BRL'}},
-      {id: 2, title: 'Fizz Buzz', price: {value: 1.99, currancy: 'BRL'}},
+      {id: 1, title: 'Foo Bar', price: {value: 0.99, currency: 'BRL'}},
+      {id: 2, title: 'Fizz Buzz', price: {value: 1.99, currency: 'BRL'}},
     ];
 
     setProducts(products);
@@ -23,7 +23,9 @@ const App = () => {
 
   return (
     <ProductList>
-      { products.map(product => <Product key={product.id} id={product.id} title={product.title} price={product.price} />) }
+      { products.map(product => 
+        <Product key={product.id} id={product.id} title={product.title} price={product.price} />
+      )}
     </ProductList>
   );
 };
