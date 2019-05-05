@@ -1,32 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { createGlobalStyle } from 'styled-components';
+import { Normalize } from 'styled-normalize';
 
 import ProductList from '../components/ProductList';
-import Product from '../components/Product';
+
+const GlobalStyles = createGlobalStyle`
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }    
+`;
 
 const App = () => {
-
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetchProducts();
-  }, [products]);
-
-  async function fetchProducts() {
-    // const response = await fetch('https://api.github.com/users/jonataa/repos');
-    const products = [
-      {id: 1, title: 'Foo Bar', price: {value: 0.99, currency: 'BRL'}},
-      {id: 2, title: 'Fizz Buzz', price: {value: 1.99, currency: 'BRL'}},
-    ];
-
-    setProducts(products);
-  }
-
   return (
-    <ProductList>
-      { products.map(product => 
-        <Product key={product.id} id={product.id} title={product.title} price={product.price} />
-      )}
-    </ProductList>
+    <React.Fragment>
+      <Normalize />
+      <GlobalStyles />
+      <ProductList></ProductList>
+    </React.Fragment>
   );
 };
 
