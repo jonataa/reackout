@@ -11,24 +11,20 @@ const Container = styled.div`
 
 const Photo = styled.img`
     width: 100%;
-    border: 1px solid #000;
 `;
 
 const Title = styled.p`
-    color: red;
+    color: #102E4A;
+    font-weight: 300;
 `;
 
-const Product = ({title, price, photo = {}}) => {
-
-    return (
-        <Container>
-            <Photo as="img" src={photo.url} alt={photo.alt}></Photo>
-            <Title>{title}</Title>
-            <Price currency={price.currency} value={price.value} />
-            <Button variant="contained" color="primary">Comprar</Button>
-        </Container>
-    );
-
-};
+const Product = ({title, price, photo = {}}) => (
+    <Container>
+        <Photo as="img" src={photo.url} alt={photo.alt}></Photo>
+        <Title>{title}</Title>
+        <Price currency={price.currency} value={price.value} />
+        <Button variant="outlined">Comprar</Button>
+    </Container>
+);
 
 export default Product;

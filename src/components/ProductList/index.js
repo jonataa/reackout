@@ -27,7 +27,13 @@ const renderProducts = ({data, loading, error}) => {
     if (error) return <div>Error</div>;
 
     return data.products.map((product, index) => (
-        <Product key={index} title={product.title} photo={product.photo} price={product.price} />
+        <Product
+            key={index}
+            id={product.id}
+            title={product.title}
+            photo={product.photo}
+            price={product.price}
+        />
     ));
 }; 
 

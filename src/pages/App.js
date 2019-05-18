@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Normalize } from 'styled-normalize';
+import 'typeface-roboto';
 
 import ProductList from '../components/ProductList';
 
@@ -13,7 +14,11 @@ const GlobalStyles = createGlobalStyle`
     *::before,
     *::after {
         box-sizing: inherit;
-    }    
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
 `;
 
 const App = () => {

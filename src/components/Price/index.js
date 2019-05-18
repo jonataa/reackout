@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Text } from './style';
+
 function getSymbolByCurrency(currency) {
     return {
         BRL: 'R$',
@@ -7,12 +9,10 @@ function getSymbolByCurrency(currency) {
 };
 
 const Price = (props) => {
-
     const {currency, value} = props;
     const symbol = getSymbolByCurrency(currency);
-
-    return <div>{symbol} {value}</div>;
-
+    
+    return <Text>{symbol} {value}</Text>;
 };
 
 export default Price;
