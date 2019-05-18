@@ -11,7 +11,7 @@ function getSymbolByCurrency(currency) {
 const Price = (props) => {
     const {currency, value} = props;
     const symbol = getSymbolByCurrency(currency);
-    
+
     return <Text>{symbol} {value}</Text>;
 };
 

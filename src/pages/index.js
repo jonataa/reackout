@@ -1,6 +1,9 @@
 import withData from '../lib/apollo';
-import Layout from '../components/Layout';
-import ProductList from '../components/ProductList';
+
+import {
+    Layout,
+    ProductList,
+} from '../components';
 
 export default withData(props => (
     <Layout>
