@@ -2,21 +2,11 @@ import React from 'react';
 
 import Price from '../Price';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
-
-const Container = styled.div`
-    text-align: center;
-    padding: 10px;
-`;
-
-const Photo = styled.img`
-    width: 100%;
-`;
-
-const Title = styled.p`
-    color: #102E4A;
-    font-weight: 300;
-`;
+import { 
+    Container,
+    Photo,
+    Title,
+} from './style';
 
 const Product = ({title, price, photo = {}}) => (
     <Container>
